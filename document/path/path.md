@@ -8,6 +8,7 @@ path模块常用方法
 * sep
 * delimiter
 * resolve 将路径片段从右至左拼接成一个绝对路径  
+* relative
 
 具体代码演示参考source/003目录  
 

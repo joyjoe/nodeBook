@@ -10,7 +10,7 @@ module.exports = {
   "rules": {
     "no-console": "off",
     "no-unused-vars": "off",
-    "quote-props": "error",
+    "quote-props": "warn",
     "quotes": "error"
   }
 }

@@ -1,0 +1,20 @@
+@baseBackgroundColor: #f60;
+@hoverBackgroundColor: #214fe7;
+
+.dialog{
+  position: relative;
+  background-color: @baseBackgroundColor;
+  .shadow{
+    box-shadow: 1px 1px 1px #214fe7;
+  }
+  .content{
+    width: 98%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+  &:hover{
+    background-color: @hoverBackgroundColor;
+  }
+}

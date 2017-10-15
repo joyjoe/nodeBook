@@ -7,3 +7,4 @@ process进程下的属性及方法
 * env
 * cwd()
 * nextTick()
+* platform

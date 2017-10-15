@@ -6,8 +6,9 @@ var config = require("./config/default");
 var mime = require("./http/mime");
 var compress = require("./http/compress");
 var range = require("./http/range");
+var browser = require("./http/browser");
 
-http.createServer((req, res)=>{
+const server = http.createServer((req, res)=>{
   var requestPath = path.join(config.root, req.url);
   fs.stat(requestPath, (err, stats) => {
     if(err){
@@ -70,6 +71,9 @@ http.createServer((req, res)=>{
       return;
     }
   });
-}).listen(config.port, ()=>{
-  console.log(`server start at ${chalk.green(config.hostname)}:${config.port}`);
+});
+server.listen(config.port, ()=>{
+  const url = `http://${config.hostname}:${config.port}`;
+  console.log(`server start at ${url}`);
+  browser.open(url);
 });

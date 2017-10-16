@@ -12,5 +12,9 @@ module.exports = {
     "no-unused-vars": "off",
     "quote-props": "warn",
     "quotes": "error"
+  },
+  "globals": {
+    "describe": true,
+    "it": true
   }
 }

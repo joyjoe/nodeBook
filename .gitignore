@@ -59,5 +59,6 @@ typings/
 
 # user config
 ## gulp tutorial
-source/007/build
+source/007/build/
+source/009/node_modules/
 

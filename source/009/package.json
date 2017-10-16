@@ -1,0 +1,17 @@
+{
+  "name": "009",
+  "version": "1.0.0",
+  "description": "利用asset模块进行断言测试",
+  "main": "index.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "mocha": "_mocha ./test/mod/modA_mocha.js"
+  },
+  "keywords": [],
+  "author": "joyjoe <zhoujiang@weathercn.com>",
+  "license": "MIT",
+  "devDependencies": {}
+}

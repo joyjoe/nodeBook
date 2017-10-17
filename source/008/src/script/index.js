@@ -1,17 +1,10 @@
-import _ from "lodash";
-import "../style/index.css";
-import icon from "../image/1.png";
+import { square } from "./math";
 
 function component(){
   var element = document.createElement("div");
-  element.innerHTML = _.join(["Hello", "webpack"], " ");
-  element.classList.add("hello");
-
-  var myIcon = new Image();
-  myIcon.src = icon;
-  element.appendChild(myIcon);
-  
+  element.innerHTML = ["Hello webpack","5 square is equal to "+square(5)].join("\n\n");
   return element;
 }
 
 document.body.appendChild(component());
+

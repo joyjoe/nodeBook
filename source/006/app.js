@@ -73,7 +73,8 @@ const server = http.createServer((req, res)=>{
   });
 });
 server.listen(config.port, ()=>{
-  const url = `http://${config.hostname}:${config.port}`;
+  let url = `http://${chalk.red(config.hostname)}:${config.port}`;
+  let ourl = `http://${config.hostname}:${config.port}`;
   console.log(`server start at ${url}`);
-  browser.open(url);
+  browser.open(ourl);
 });

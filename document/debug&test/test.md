@@ -16,3 +16,6 @@ https://github.com/chaijs/chai
 `chai`支持`BDD`和`TDD`,但是测试案例的编写不够系统。    
 3. mocha
 一个系统完整的测试框架
+
+4. istanbul   
+安装`npm install istanbul --save-dev`   

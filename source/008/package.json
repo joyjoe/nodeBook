@@ -5,9 +5,10 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack --display-reasons --optimize-minimize",
+    "build": "webpack --display-reasons --config webpack.prod.js",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --hotOnly"
+    "start": "webpack-dev-server --open --config webpack.dev.js",
+    "s1": "webpack --config webpack.config.js"
   },
   "keywords": [],
   "author": "joyjoe <zhoujiang@weathercn.com>",
@@ -22,7 +23,8 @@
     "style-loader": "^0.19.0",
     "uglifyjs-webpack-plugin": "^1.0.0-beta.3",
     "webpack": "^3.8.0",
-    "webpack-dev-server": "^2.9.2"
+    "webpack-dev-server": "^2.9.2",
+    "webpack-merge": "^4.1.0"
   },
   "dependencies": {}
 }

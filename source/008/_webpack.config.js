@@ -6,16 +6,13 @@ const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   "entry": {
-    // "app": "./src/script/dynamic.js",
-    "index": "./src/script/index.js",
-    // "vendor": ["lodash"]
+    "app": "./src/script/index.js",
+    // "print": "./src/script/print.js",
   },
   "output": {
-    // "filename": "./script/[id]-[name]-[chunkhash:5].bundle.js",
+    // "filename": "bundle.js",
     "filename": "./script/[name].bundle.js",
-    "path": path.resolve(__dirname, "./dist"),
-    // "chunkFilename": "[id]-[name].bundle.js"
-    "chunkFilename": "[name].bundle.js"
+    "path": path.resolve(__dirname, "./dist")
   },
   "module": {
     "rules": [
@@ -36,29 +33,14 @@ module.exports = {
   },
   "plugins": [
     new htmlWebpackPlugin({
-      // "title": "output manager"
-      "title": "caching"
+      "title": "output manager"
     }),
     new cleanWebpackPlugin(["dist"]),
     // new uglifyjsWebpackPlugin()
-    // 内置插件提供公共部分
-    // new webpack.optimize.CommonsChunkPlugin({
-    //   "name": "vendor"
-    // }),
-    new webpack.optimize.CommonsChunkPlugin({
-      "name": "runtime"
-    }),
-    // new webpack.HashedModuleIdsPlugin(),
-    new webpack.ProvidePlugin({
-      "lodash": "lodash"
-    })
   ],
   // "devtool": "inline-source-map",
   "devServer": {
     "contentBase": ["./dist"],
     "hot": true
-  },
-  // "externals": {
-  //   "lodash": "_"
-  // }
+  }
 };

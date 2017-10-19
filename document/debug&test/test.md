@@ -19,3 +19,6 @@ https://github.com/chaijs/chai
 
 4. istanbul   
 安装`npm install istanbul --save-dev`   
+
+5. 持续集成   
+安装 

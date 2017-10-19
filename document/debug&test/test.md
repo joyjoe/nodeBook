@@ -21,4 +21,11 @@ https://github.com/chaijs/chai
 安装`npm install istanbul --save-dev`   
 
 5. 持续集成   
-安装 
+使用travis CI,需要使用`.travis.yml`文件   
+
+6. 覆盖测试
+使用`codecov`   
+
+7. benchmark  
+关于性能方面的测试   
+`npm install -g benchmark`  

@@ -15,3 +15,11 @@ npm install gulp -D
 * gulp-less
 * gulp-autoprefixer
 * gulp-clean-css
+* gulp-uglify   
+  压缩代码
+* gulp-jshint
+* gulp-concat
+* gulp-rename
+* gulp-load-plugins
+* gulp-imagemin
+* gulp-html-minify

@@ -2,7 +2,7 @@ const path = require("path");
 const webpack = require("webpack");
 const htmlWebpackPlugin = require("html-webpack-plugin");
 const cleanWebpackPlugin = require("clean-webpack-plugin");
-const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
+// const uglifyjsWebpackPlugin = require("uglifyjs-webpack-plugin");
 
 module.exports = {
   "entry": {
@@ -15,7 +15,7 @@ module.exports = {
     "filename": "./script/[name].bundle.js",
     "path": path.resolve(__dirname, "./dist"),
     // "chunkFilename": "[id]-[name].bundle.js"
-    "chunkFilename": "[name].bundle.js"
+    // "chunkFilename": "[name].bundle.js"
   },
   "module": {
     "rules": [
@@ -45,19 +45,19 @@ module.exports = {
     // new webpack.optimize.CommonsChunkPlugin({
     //   "name": "vendor"
     // }),
-    new webpack.optimize.CommonsChunkPlugin({
-      "name": "runtime"
-    }),
-    // new webpack.HashedModuleIdsPlugin(),
-    new webpack.ProvidePlugin({
-      "lodash": "lodash"
-    })
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   "name": "runtime"
+    // }),
+    // // new webpack.HashedModuleIdsPlugin(),
+    // new webpack.ProvidePlugin({
+    //   "lodash": "lodash"
+    // })
   ],
   // "devtool": "inline-source-map",
-  "devServer": {
-    "contentBase": ["./dist"],
-    "hot": true
-  },
+  // "devServer": {
+  //   "contentBase": ["./dist"],
+  //   "hot": true
+  // },
   // "externals": {
   //   "lodash": "_"
   // }

@@ -44,7 +44,16 @@ new webpack.DefinePlugin({
 `npm install html-webpack-plugin --save-dev`  
 解决自动引入chunk的问题  
 配置参数: 
-  ** template
+  * template
+  * filename
+  * title
+    这里有个坑，如果指定了template选项，那么在template文件中应该使用<%= htmlWebpackPlugin.options.title %>来获取title。否则生成的HTML文件不会自动将title补上。
+  * inject
+  * chunks
+  * excludeChunks
+  * favicon
+  * hash
+  * showErrors  
 
 * html-webpack-template
 `npm install html-webpack-template --save-dev`  

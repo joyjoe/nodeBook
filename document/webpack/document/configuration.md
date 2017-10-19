@@ -14,6 +14,7 @@
   * libraryTarget
   * pathinfo
   * chunkFilename
+    动态加载(懒加载)时为新的chunkFilename指定生成的文件名       
   * jsonpFunction
   * sourceMapFilename
   * devtoolModuleFilenameTemplate
@@ -25,11 +26,20 @@
     * module.rule.test
     * module.rule.include
     * module.rule.exclude
+        /node_modules/    
     * module.rule.issuer
     * module.rule.enforce
     * module.rule.loader
     * module.rule.options
-
+* plugins
+  * CommonsChunkPlugin
+    使用CommonsChunkPlugin插件进行代码分离时，可以为需要分离的chunks指定生成后的chunk名和文件名，分别是name及filename参数   
+* resolve
+  * extension
+* devServer
+  * inline
+  * progress
+  * hot
 
 ## 配置类型
 * 导出为对象

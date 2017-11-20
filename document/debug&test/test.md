@@ -29,3 +29,5 @@ https://github.com/chaijs/chai
 7. benchmark  
 关于性能方面的测试   
 `npm install -g benchmark`  
+
+8. UI测试   

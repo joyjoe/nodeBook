@@ -78,6 +78,14 @@ devServer:{
 }
 ```
 添加脚本`webpack-dev-server --open`或`webpack-dev-server --hotOnly` 
+```
+--hot    启用热替换
+--inline 启用热加载
+```
+可以在`devServer`配置项中添加`hot:true, inline:true`,也可以在script脚本中添加
+```
+webpack-dev-server --inline --hot
+```
 
 * webpack-dev-middleware
 安装`npm install webpack-dev-middleware --save-dev` 

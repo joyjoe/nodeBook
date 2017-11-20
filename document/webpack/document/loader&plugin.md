@@ -9,7 +9,12 @@
 * url-loader
 * babel-loader
 * css-loader
+  modules: true
 * style-loader
+* html-loader (https://doc.webpack-china.org/loaders/html-loader/)
+* babel-loader
+  配置选项    
+  * cacheDirectory     
 
 ## plugin
 * html-webpack-plugin
@@ -18,11 +23,15 @@
     * template
     * filename
     * title
-    * inject
+    * inject : true | false | "head" | "body"
     * favicon
+    * minify
     * hash
+    * cache
     * showErrors
     * chunks
+    * chunksSortMode
+    * excludeChunks
 
 
 * extra-text-webpack-plugin
@@ -75,3 +84,38 @@
 
 * uglifyjs-webpack-plugin   
 
+
+* banner-plugin
+  这个是webpack内置的plugin,为每个chunk文件的头部添加banner     
+  使用方法:   
+  ```
+  new webpack.BannerPlugin(banner)
+  banner: string
+
+  new webpack.BannerPlugin(option)
+  option: object
+  {
+    banner: string,
+    raw: boolean
+    entryOnly: boolean,
+    test: string | RegExp | Array,
+    include: string | RegExp | Array,
+    exclude: string | RegExp | Array
+  }
+  ```
+* commons-chunk-plugin
+  这个是webpack内置的plugin    
+  (https://doc.webpack-china.org/plugins/commons-chunk-plugin/)   
+  ```
+  new webpack.CommonsChunkPlugin(option)
+  ```
+
+* ProvidePlugin
+  用于自动加载模块(https://doc.webpack-china.org/plugins/provide-plugin/)    
+
+* DefinePlugin
+
+
+* DLLPlugin
+* DLLReferencePlugin
+* CopyWebpackPlugin
